@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h3>지점별 매출 현황</h3>
+<h3>상품별 매출 현황</h3>
 <table border=1>
 	<tr>
 		<td>지점 코드</td>

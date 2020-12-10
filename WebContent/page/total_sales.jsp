@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
-<%@ page import = "java.text.DecimalFormat" %>>
+<%@ page import = "java.text.DecimalFormat" %>
 
 
 <!DOCTYPE html>
 <html>
 <body>
-
+<h3>통합매출현황조회</h3>
 <table border=1>
 	<tr>
 		<td>판매 ID</td>

@@ -7,11 +7,11 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h3>상품별 매출 현황</h3>
+<h3>지점별 매출 현황</h3>
 <table border=1>
 	<tr>
-		<td>지점 코드</td>
-		<td>지점 명</td>
+		<td>피자 코드</td>
+		<td>피자 명</td>
 		<td>총매출액</td>
 	</tr>
 <%
@@ -21,11 +21,11 @@
 		("jdbc:oracle:thin:@//localhost:1521/xe", "sdh11", "1234");
 		
 		Statement stmt = conn.createStatement();
-		String query = "SELECT SHOP.SCODE, SHOP.SNAME, SUM(SALE.AMOUNT * PIZZA.COST) total "+
+		String query = "SELECT PIZZA.PCODE, PIZZA.PNAME, SUM(SALE.AMOUNT * PIZZA.COST) total "+
 					   "FROM TBL_SHOP_01 SHOP, tbl_salelist_01 SALE, TBL_PIZZA_01 PIZZA "+
 					   "WHERE SALE.SCODE = SHOP.SCODE AND SALE.PCODE = PIZZA.PCODE "+
-					   "GROUP BY SHOP.SCODE, SHOP.SNAME "+
-					   "ORDER BY SHOP.SCODE ASC";
+					   "GROUP BY PIZZA.PCODE, PIZZA.PNAME "+
+					   "ORDER BY total DESC";
 		ResultSet rs = stmt.executeQuery(query);
 		%>
 		<%
