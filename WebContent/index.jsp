@@ -19,8 +19,8 @@
 		case "insert_pizza":
 			%><%@ include file="page/insert_pizza.jsp" %><% 
 			break;
-		case "total_sales_lookup":
-			%><%@ include file="page/total_sales_lookup.jsp" %><% 
+		case "total_sales":
+			%><%@ include file="page/total_sales.jsp" %><% 
 			break;
 		case "shop_by_sales":
 			%><%@ include file="page/shop_by_sales.jsp" %><% 
